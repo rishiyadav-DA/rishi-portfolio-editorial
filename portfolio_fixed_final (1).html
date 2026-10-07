@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Rishi Kumar — Freelance Data Analyst & Python Developer. Data cleaning, SQL analytics, automation, dashboards and machine learning.">
+
+<title>Rishi Kumar — Data, Python & AI</title>
+
+<style>
+
+:root{--bg:#08090b;--card:#111318;--text:#f4f4f5;--muted:#a1a1aa;--line:#24262d;--accent:#b7ff4a;--accent2:#8ef0ff;--max:1120px}
+
+\*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0%,#17201a 0,transparent 35%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+
+a{color:inherit;text-decoration:none}.wrap{max-width:var(--max);margin:auto;padding:0 24px}
+
+nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(8,9,11,.82);backdrop-filter:blur(14px);z-index:10}
+
+.logo{font-weight:800;letter-spacing:-.04em}.logo span{color:var(--accent)}.navlinks{display:flex;gap:24px;color:var(--muted);font-size:14px}.navlinks a:hover{color:var(--text)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border:1px solid var(--line);border-radius:10px;font-weight:700;font-size:14px;transition:.2s}.btn.primary{background:var(--accent);color:#0b0d08;border-color:var(--accent)}.btn:hover{transform:translateY(-2px)}
+
+.hero{padding:110px 0 90px;display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:center}.eyebrow{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:12px}.hero h1{font-size:clamp(48px,7vw,86px);line-height:.98;letter-spacing:-.07em;margin:16px 0 24px}.hero h1 em{font-style:normal;color:var(--muted)}.hero p{font-size:20px;color:var(--muted);max-width:680px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+
+.hero-card{border:1px solid var(--line);background:linear-gradient(145deg,#151820,#0d0f13);padding:28px;border-radius:20px;box-shadow:0 20px 70px rgba(0,0,0,.28)}.terminal{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;color:#d4d4d8}.terminal .green{color:var(--accent)}.terminal .blue{color:var(--accent2)}.metric{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:16px 0;margin-top:14px}.metric b{font-size:22px}
+
+section{padding:90px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}.kicker{color:var(--accent);font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:800}.section-head h2{font-size:44px;line-height:1.05;letter-spacing:-.05em;margin:8px 0 0}.section-head p{max-width:480px;color:var(--muted)}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}.card h3{margin:0 0 8px;font-size:20px}.card p{color:var(--muted);margin:0}.tagrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.tag{border:1px solid var(--line);border-radius:999px;padding:5px 9px;font-size:12px;color:#d4d4d8}
+
+.project{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;background:linear-gradient(135deg,#151820,#0d0f12);border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-bottom:18px}.project .copy{padding:34px}.project .visual{min-height:290px;background:linear-gradient(135deg,#1c2519,#0b1011);display:flex;align-items:center;justify-content:center;padding:30px}.mock{width:85%;border:1px solid #39413a;background:#0b0d0c;border-radius:14px;padding:20px;font-family:ui-monospace,monospace;font-size:12px}.mock .bar{height:8px;background:var(--accent);width:45%;margin-bottom:18px;border-radius:5px}.project h3{font-size:28px;margin:8px 0}.project p{color:var(--muted)}.project a{text-decoration:underline;text-underline-offset:4px}
+
+.services .card{min-height:190px}.num{font-size:12px;color:var(--accent);font-weight:800}
+
+.process{counter-reset:item}.process .card{position:relative}.process h3{margin-top:30px}
+
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.about h2{font-size:44px;line-height:1.05;letter-spacing:-.05em;margin:8px 0}.about p{color:var(--muted);font-size:18px}
+
+.cta{background:var(--accent);color:#0b0d08;border-radius:22px;padding:55px}.cta h2{font-size:52px;line-height:1;letter-spacing:-.06em;margin:0 0 14px;max-width:760px}.cta p{max-width:650px}.cta .btn{background:#0b0d08;color:#fff;border-color:#0b0d08}
+
+footer{padding:35px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:20px}
+
+@media(max-width:800px){.hero,.project,.about{grid-template-columns:1fr}.hero{padding-top:70px}.grid{grid-template-columns:1fr}.navlinks{display:none}.section-head{display:block}.hero-card{margin-top:10px}.cta h2{font-size:38px}footer{display:block}}
+
+
+.tech-logos{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
+.tech-logo{background:var(--card);border:1px solid var(--line);border-radius:16px;min-height:125px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;transition:.2s}
+.tech-logo:hover{transform:translateY(-4px);border-color:#3b414b}
+.tech-logo img{width:48px;height:48px;object-fit:contain}
+.tech-logo span{font-size:13px;color:#d4d4d8;font-weight:650}
+@media(max-width:800px){.tech-logos{grid-template-columns:repeat(2,1fr)}}
+
+
+.tech-logos{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
+.tech-logo{background:var(--card);border:1px solid var(--line);border-radius:16px;min-height:125px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;transition:.2s}
+.tech-logo:hover{transform:translateY(-4px);border-color:#3b414b}
+.tech-icon{width:52px;height:52px;border-radius:13px;border:1px solid #39413a;background:#151a17;color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;letter-spacing:-.04em}
+.tech-logo span{font-size:13px;color:#d4d4d8;font-weight:650}
+@media(max-width:800px){.tech-logos{grid-template-columns:repeat(2,1fr)}}
+
+</style>
+
+</head>
+
+<body>
+
+<nav><div class="wrap" style="width:100%;display:flex;align-items:center;justify-content:space-between">
+
+<a class="logo" href="#">RISHI<span>.</span></a>
+
+<div class="navlinks"><a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+
+<a class="btn primary" href="#contact">Start a project</a>
+
+</div></nav>
+
+
+
+<main>
+
+<section class="hero wrap">
+
+<div>
+
+<div class="eyebrow">Freelance Data & AI</div>
+
+<h1>I turn messy data into <em>useful decisions.</em></h1>
+
+<p>Python, SQL, analytics and machine learning — packaged into practical solutions for businesses that need cleaner data, better reporting and less repetitive work.</p>
+
+<div class="actions"><a class="btn primary" href="#contact">Tell me what you need →</a><a class="btn" href="#work">See my work</a></div>
+
+</div>
+
+<div class="hero-card">
+
+<div class="terminal">
+
+<div><span class="green">$</span> rishi --mode <span class="blue">freelance</span></div>
+
+<br>
+
+<div>→ clean messy datasets</div>
+
+<div>→ write production-ready SQL</div>
+
+<div>→ automate repetitive analysis</div>
+
+<div>→ build dashboards & reports</div>
+
+<div>→ prototype ML solutions</div>
+
+</div>
+
+<div class="metric"><span>Core stack</span><b>Python · SQL</b></div>
+
+<div class="metric"><span>Delivery</span><b>Remote</b></div>
+
+</div>
+
+</section>
+
+
+
+<section id="work">
+
+<div class="wrap">
+
+<div class="section-head"><div><div class="kicker">Selected work</div><h2>Proof, not promises.</h2></div><p>Real project work and technical builds that show how I approach data, software and business problems.</p></div>
+
+
+
+<div class="project">
+
+<div class="copy"><div class="kicker">01 · Client / Web Project</div><h3>Common Thread Studio</h3><p>A real-world digital project for a freelance writer and brand storyteller. The work demonstrates translating a business identity into a clear, usable web presence.</p><div class="tagrow"><span class="tag">Client Project</span><span class="tag">Web</span><span class="tag">Brand Storytelling</span></div>\</div>
+
+<div class="visual"><div class="mock"><div class="bar"></div><div>common_thread_studio</div><br><div>brand → story → audience</div><div>clear information architecture</div><div>client-focused digital presence</div></div></div>
+
+</div>
+
+
+
+<div class="project">
+
+<div class="copy"><div class="kicker">02 · AI / ML</div><h3>AI Multi-Horizon Stock Prediction Platform</h3><p>A Python-based analytical platform combining market data, technical indicators, sentiment signals and machine-learning models in a web interface.</p><p style="margin-top:22px"><a href="https://rishiyadav-da-ds-project-app-cxjd8x.streamlit.app/" target="_blank" rel="noopener">View live project ↗</a></p></div>
+
+<div class="visual"><div class="mock"><div class="bar"></div><div>market_data → features</div><div>RSI · MACD · ATR · OBV</div><div>↓</div><div>ensemble_models → prediction</div><div>↓</div><div>dashboard → decision support</div></div></div>
+
+</div>
+
+
+
+<div class="project">
+
+<div class="copy"><div class="kicker">03 · Analytics</div><h3>Data Cleaning, SQL & Reporting</h3><p>Hands-on work with structured business data: verification, cleaning, transformation, SQL analysis and turning raw records into usable reporting.</p><div class="tagrow"><span class="tag">SQL</span><span class="tag">MySQL</span><span class="tag">Pandas</span><span class="tag">Excel</span><span class="tag">Power BI</span></div><p style="margin-top:22px"><a href="https://github.com/rishiyadav-DA/analysis-project/blob/master/Dashboard.pdf" target="_blank" rel="noopener">View Dashboard ↗</a></p></div>
+
+<div class="visual"><div class="mock"><div class="bar"></div><div>raw_data.csv</div><div>↓ validate</div><div>↓ clean</div><div>↓ query</div><div>↓ visualize</div><div class="green">✓ business-ready output</div></div></div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="services" class="services">
+
+<div class="wrap">
+
+<div class="section-head"><div><div class="kicker">What I can do</div><h2>Useful work. Clear deliverables.</h2></div><p>Start with a small task. Scale into a longer engagement if the work proves valuable.</p></div>
+
+<div class="grid">
+
+<div class="card"><div class="num">01</div><h3>Data Cleaning</h3><p>Fix inconsistent, duplicate, missing or messy Excel/CSV data and prepare it for analysis.</p></div>
+
+<div class="card"><div class="num">02</div><h3>SQL Analytics</h3><p>Queries, joins, aggregations, CTEs, subqueries and analytical reporting from relational data.</p></div>
+
+<div class="card"><div class="num">03</div><h3>Python Automation</h3><p>Automate repetitive data processing, validation, transformation and reporti<section>
+<div class="wrap">
+<div class="section-head"><div><div class="kicker">Toolbox</div><h2>Technical stack.</h2></div><p>Tools I use for data analysis, Python development, visualization and machine learning.</p></div>
+<div class="tech-logos">
+<div class="tech-logo"><div class="tech-icon">Py</div><span>Python</span></div>
+<div class="tech-logo"><div class="tech-icon">Pd</div><span>Pandas</span></div>
+<div class="tech-logo"><div class="tech-icon">NP</div><span>NumPy</span></div>
+<div class="tech-logo"><div class="tech-icon">SQL</div><span>SQL</span></div>
+<div class="tech-logo"><div class="tech-icon">BI</div><span>Power BI</span></div>
+<div class="tech-logo"><div class="tech-icon">XL</div><span>Excel</span></div>
+<div class="tech-logo"><div class="tech-icon">ST</div><span>Streamlit</span></div>
+<div class="tech-logo"><div class="tech-icon">SK</div><span>Scikit-learn</span></div>
+<div class="tech-logo"><div class="tech-icon">XG</div><span>XGBoost</span></div>
+<div class="tech-logo"><div class="tech-icon">LG</div><span>LightGBM</span></div>
+<div class="tech-logo"><div class="tech-icon">GH</div><span>GitHub</span></div>
+<div class="tech-logo"><div class="tech-icon">PL</div><span>Plotly</span></div>
+</div>
+</div>
+</section>>
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<div class="wrap">
+
+<div class="section-head"><div><div class="kicker">Toolbox</div><h2>Technical stack.</h2></div></div>
+
+<div class="grid">
+
+<div class="card"><h3>Python</h3><p>Pandas · NumPy · Matplotlib · Seaborn · Scikit-learn · Streamlit</p></div>
+
+<div class="card"><h3>SQL</h3><p>MySQL · Joins · CTEs · Subqueries · Aggregations · Window functions</p></div>
+
+<div class="card"><h3>BI & Data</h3><p>Power BI · Excel · Plotly · Data cleaning · EDA · Feature engineering</p></div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="about">
+
+<div class="wrap about">
+
+<div><div class="kicker">About</div><h2>Technical enough to build. Practical enough to listen.</h2></div>
+
+<div><p>I work at the intersection of data and practical business problems. My focus is not adding technology for the sake of it — it is taking a messy requirement or dataset and producing something a person can actually use.</p><p>My toolkit covers Python, SQL, machine learning and visualization, with hands-on experience working with real-world data and client-oriented digital projects.</p></div>
+
+</div>
+
+</section>
+
+
+
+<section id="contact">
+
+<div class="wrap">
+
+<div class="cta">
+
+<div class="kicker">Have a data problem?</div>
+
+<h2>Send me the messy version. We'll figure out the useful version.</h2>
+
+<p>Tell me what you're working with, what is currently painful, and what you want as the final output. Small projects and freelance engagements welcome.</p>
+
+<div class="actions">
+
+<a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=rishipryj%40gmail.com&su=Portfolio%20Inquiry" target="_blank" rel="noopener">Email me</a>
+
+<a class="btn" href="https://www.linkedin.com/in/rishi-kumar-0b4055316" target="_blank" rel="noopener">LinkedIn ↗</a>
+
+<a class="btn" href="https://github.com/rishiyadav-DA" target="_blank" rel="noopener">GitHub ↗</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<footer class="wrap"><span>© 2026 Rishi Kumar</span><span>Python · SQL · Data · AI</span></footer>
+
+</body>
+
+</html>
